@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Imposter Fußball V2</title>
+    <link rel="stylesheet" href="imposter2.css">
+</head>
+<body>
+
+<div class="container" id="setupScreen">
+    <h1>⚽ Imposter Fußball V2</h1>
+
+    <input type="number" id="playerCount" placeholder="Spieleranzahl" min="3" max="20">
+    <div id="nameInputs"></div>
+    <button onclick="createNameInputs()">Namen eingeben</button>
+    <button onclick="startRound()">Runde starten</button>
+</div>
+
+<div class="container hidden" id="gameScreen">
+    <h2 id="playerName"></h2>
+    <h2 id="roleText"></h2>
+    <p id="wordText">Drücke auf "Wort anzeigen"</p>
+
+    <button id="revealButton" onclick="revealWord()">Wort anzeigen</button>
+    <button id="nextButton" class="hidden" onclick="nextPlayer()">Nächster Spieler</button>
+    <button id="startGameButton" class="hidden" onclick="startGame()">Spiel starten</button>
+</div>
+
+<div class="container hidden" id="finalScreen">
+    <h2>Diskussionsphase gestartet!</h2>
+    <button onclick="endGame()">Spiel beenden</button>
+    <button onclick="restartGame()">Neues Spiel</button>
+</div>
+
+<script src="imposter2.js"></script>
+</body>
+</html>
